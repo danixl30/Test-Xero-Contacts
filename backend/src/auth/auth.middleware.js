@@ -3,7 +3,7 @@ import {getTokenData} from "../CacheManager/TokenSet/cache.token.js"
 import {unathorizedError} from "../error/errors.js"
 import {refreshToken} from "../xero/auth/xero.auth.service.js"
 
-const compareTime = (time) => time.getTime() > new Date().getTime()
+const compareTime = (time) => time > new Date() / 1000
 
 export const authMiddleware = asyncHandler(async (req, _, next) => {
     const authid = req.headers.authid

@@ -29,7 +29,8 @@ export const requestToken = async (queries) => {
     const client = await getClient()
     client.CLOCK_TOLERANCE = 3500
     const token = await client.authorizationCallback(redirectUrl, queries)
-    token.expires_at = new Date(new Date().getTime() + (token.expires_at * 1000))
+    //token.expires_at = new Date(new Date().getTime() + (token.expires_at * 1000))
+    token.expires_at = (new Date()) / 1000 + token.expires_at 
     setTokenData(state, token)
     return state 
 }
@@ -41,7 +42,8 @@ export const refreshToken = async (authid, tokenSet) => {
     tokenSet.access_token = newToken.access_token
     tokenSet.id_token = newToken.id_token
     tokenSet.refresh_token = newToken.refresh_token
-    tokenSet.expires_at = new Date(new Date().getTime() + (newToken.expires_at * 1000))
+    //tokenSet.expires_at = new Date(new Date().getTime() + (newToken.expires_at * 1000))
+    token.expires_at = (new Date()) / 1000 + newToken.expires_at 
     setTokenData(authid, tokenSet)
     return tokenSet
 }
