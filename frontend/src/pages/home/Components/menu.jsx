@@ -2,6 +2,7 @@ import { Center, Grid } from "@mantine/core"
 import {useNavigate} from "react-router-dom"
 import PaperDefault from '../../../components/PaperDefault'
 import TextWhite from '../../../components/TextWhite'
+import useStylesPaper from "../../../hooks/useStylesPaper"
 
 
 const elements = [
@@ -26,6 +27,7 @@ const elements = [
 
 const MenuHome = () => {
     const navigate = useNavigate()
+    const { styles } = useStylesPaper()
     const onClickItem = (name) => {
         navigate(name)
     }
@@ -34,7 +36,10 @@ const MenuHome = () => {
             <Grid>
                 {elements.map(e => 
                     <Grid.Col span = {6}>
-                        <PaperDefault onClick = {() => onClickItem(e.onClick)}>
+                        <PaperDefault 
+                            sx = {styles}
+                            onClick = {() => onClickItem(e.onClick)}
+                        >
                             <Center>
                                 <TextWhite>{e.name}</TextWhite>
                             </Center>

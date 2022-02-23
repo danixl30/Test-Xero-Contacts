@@ -2,7 +2,13 @@ import {Paper} from "@mantine/core"
 
 const PaperDefault = (props) => {
     return(
-        <Paper onClick = {props.onClick} radius = "md" style= {{background: '#003366', padding: '20px'}}>
+        <Paper 
+            shadow = "lg"
+            onClick = {props.onClick} 
+            radius = "md" 
+            style= {{backgroundColor: '#003366', padding: '20px'}}
+            sx = {props.sx} 
+        >
             {props.children}
         </Paper>
     )

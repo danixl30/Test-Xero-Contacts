@@ -27,9 +27,9 @@ export default function ContactsPage(){
                         <PaperDefault>
                             <Center>
                                 <SimpleGrid>
-                                    <TextWhite>{e.Name}</TextWhite>
+                                    <TextWhite>Name: {e.Name}</TextWhite>
                                     <Center>
-                                        <TextWhite>{e.ContactStatus}</TextWhite>
+                                        <TextWhite>Status: {e.ContactStatus}</TextWhite>
                                     </Center>
                                 </SimpleGrid>
                             </Center>

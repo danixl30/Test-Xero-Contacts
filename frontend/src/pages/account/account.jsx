@@ -27,15 +27,15 @@ export default function AccountPage(){
                         <PaperDefault>
                             <Center>
                                 <SimpleGrid>
-                                    <TextWhite>{e.Name}</TextWhite>
+                                    <TextWhite>Name: {e.Name}</TextWhite>
                                     <Center>
-                                        <TextWhite>{e.Type}</TextWhite>
+                                        <TextWhite>Type: {e.Type}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.ConcurrencyCode}</TextWhite>
+                                        <TextWhite>Currency: {e.CurrencyCode}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.Code}</TextWhite>
+                                        <TextWhite>Code: {e.Code}</TextWhite>
                                     </Center>
                                 </SimpleGrid>
                             </Center>

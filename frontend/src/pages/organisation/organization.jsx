@@ -29,15 +29,15 @@ export default function OrganizationPage() {
                         <PaperDefault>
                             <Center>
                                 <SimpleGrid>
-                                    <TextWhite>{e.Name}</TextWhite>
+                                    <TextWhite>Name: {e.Name}</TextWhite>
                                     <Center>
-                                        <TextWhite>{e.OrganisationType}</TextWhite>
+                                        <TextWhite>Type: {e.OrganisationType}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.BaseCurrency}</TextWhite>
+                                        <TextWhite>Currency: {e.BaseCurrency}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.OrganisationStatus}</TextWhite>
+                                        <TextWhite>Status: {e.OrganisationStatus}</TextWhite>
                                     </Center>
                                 </SimpleGrid>
                             </Center>

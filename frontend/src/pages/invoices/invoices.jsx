@@ -37,15 +37,15 @@ export default function InvoicesPage() {
                         <PaperDefault>
                             <Center>
                                 <SimpleGrid>
-                                    <TextWhite>{e.Contact.Name}</TextWhite>
+                                    <TextWhite>Name: {e.Contact.Name}</TextWhite>
                                     <Center>
-                                        <TextWhite>{e.Type}</TextWhite>
+                                        <TextWhite>Type: {e.Type}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.Status}</TextWhite>
+                                        <TextWhite>Status: {e.Status}</TextWhite>
                                     </Center>
                                     <Center>
-                                        <TextWhite>{e.Total}</TextWhite>
+                                        <TextWhite>Total: {e.Total}</TextWhite>
                                     </Center>
                                 </SimpleGrid>
                             </Center>
