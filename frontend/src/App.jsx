@@ -10,6 +10,7 @@ const AccountPage = lazy(() => import('./pages/account/account'))
 const InvoicesPage = lazy(() => import('./pages/invoices/invoices'))
 const OrganizationPage = lazy(() => import('./pages/organisation/organization'))
 const ErrorPage = lazy(() => import('./pages/error/ErrorPage'))
+const FilteredContactsPage = lazy(() => import('./pages/filtered/FilteredContactsPage'))
 
 const routes = [
     {
@@ -31,6 +32,10 @@ const routes = [
     {
         path: '/organization',
         Component: () => <OrganizationPage/> 
+    },
+    {
+        path: '/contacts/filter',
+        Component: () => <FilteredContactsPage/> 
     },
     {
         path: '/error/:authid',

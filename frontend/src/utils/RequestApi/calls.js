@@ -54,6 +54,20 @@ export const getContacts = async (authid) => {
     }
 }
 
+export const getContactsFiltered = async (authid) => {
+    try {
+        const data = await axios.get(baseUrl+'/xero/api/contacts/filter', {
+            headers: {
+                authid
+            }
+        })
+        return data.data
+    }catch(e) {
+        console.log(e)
+        return null
+    }
+}
+
 export const getInvoices = async (authid) => {
     try {
         const data = await axios.get(baseUrl+'/xero/api/invoices', {
